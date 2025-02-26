@@ -77,7 +77,7 @@ func main() {
 		return unicode.Is(unicode.Han, c)
 	}
 	fmt.Println(strings.IndexFunc("abcd世界", f)) // 4
-	fmt.Println(strings.IndexFunc("abc", f))      // -1
+	fmt.Println(strings.IndexFunc("abc", f))    // -1
 
 	fmt.Println(strings.IndexRune("chicken", 'k')) // 4
 	fmt.Println(strings.IndexRune("chicken", 'd')) // -1
