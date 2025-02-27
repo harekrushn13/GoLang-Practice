@@ -10,16 +10,14 @@ func printNumbers() {
 	x := 1
 	for i := 1; i <= 3; i++ {
 		defer func() {
-			fmt.Println("Deferredvvbbvbvbv:", i, x)
+			fmt.Println("Deferred:", i, x)
 		}()
 		x++
 
-		fmt.Println("rbfbjrf4")
-		//go func() {
-		//	fmt.Println("Goroutine:", i)
-		//}()
+		go func() {
+			fmt.Println("Goroutine:", i, x)
+		}()
 	}
-	fmt.Println("after loop")
 }
 
 //func printNumbers() {

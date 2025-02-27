@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	i1 := generateWork([]int{0, 2, 6, 8})
+	i1 := generateWork([]int{0, 2, 4, 6})
 	i2 := generateWork([]int{1, 3, 5, 7})
 
 	out := fanIn(i1, i2)
