@@ -6,7 +6,7 @@ import (
 )
 
 const (
-	size      = 1000
+	size      = 10000
 	workerNum = 10
 	chunkSize = 100
 )
@@ -33,7 +33,7 @@ func main() {
 		totalSum += sum
 	}
 
-	average := totalSum / (size / chunkSize)
+	average := totalSum / size
 
 	fmt.Printf("Average : %.2f\n", average)
 }
@@ -50,7 +50,7 @@ func worker(ch <-chan []int, result chan<- float64, wg *sync.WaitGroup) {
 			sum += y
 		}
 	}
-	result <- float64(sum) / chunkSize
+	result <- float64(sum)
 }
 
 func generator() <-chan []int {
