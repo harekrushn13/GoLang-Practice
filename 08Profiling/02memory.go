@@ -16,5 +16,10 @@ func main() {
 	data := make([]byte, 1000000)
 	_ = data
 
+	go func() {
+		data := make([]byte, 1000000)
+		_ = data
+	}()
+
 	pprof.WriteHeapProfile(f)
 }

@@ -1,0 +1,24 @@
+{
+  "name": "John Doe",
+  "age": 30,
+  "email": "john.doe@example.com",
+  "isVerified": true,
+  "address": {
+    "street": "123 Main St",
+    "city": "Anytown",
+    "state": "CA",
+    "zipcode": "12345"
+  },
+  "friends": [
+    {
+      "name": "Jane Smith",
+      "age": 28,
+      "email": "jane.smith@example.com"
+    },
+    {
+      "name": "Robert Brown",
+      "age": 35,
+      "email": "robert.brown@example.com"
+    }
+  ]
+}

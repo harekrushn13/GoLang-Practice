@@ -19,7 +19,26 @@ func main() {
 	pprof.StartCPUProfile(f)
 	defer pprof.StopCPUProfile()
 
-	for i := 0; i < 1e9; i++ {
-		doWork(i)
+	for i := 0; i < 100; i++ {
+		//doWork(i)
+		heavyComputation()
+		heavyComputation2()
 	}
+	//heavyComputation()
+	//time.Sleep(time.Second)
+}
+
+func heavyComputation() {
+	sum := 0
+	for i := 0; i < 1e7; i++ {
+		sum += i * i
+	}
+	//fmt.Println("Computation done:", sum)
+}
+func heavyComputation2() {
+	sum := 0
+	for i := 0; i < 1e7; i++ {
+		sum += i * i * 1
+	}
+	//fmt.Println("Computation done:", sum)
 }

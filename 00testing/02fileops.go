@@ -128,4 +128,8 @@ func main() {
 	if err := f.Close(); err != nil {
 		log.Fatal(err)
 	}
+
+	//buff := make([]byte, 1024)
+	//
+	//dataBytes := f.Read(buff)
 }
