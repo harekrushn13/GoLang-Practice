@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"unsafe"
 )
 
@@ -81,14 +80,14 @@ func main() {
 	//fmt.Println(s)
 
 	// Zero-Copy Conversion Using unsafe
-	s := "hello"
-	//b := StringToBytes(s)
-	b := *(*[]byte)(unsafe.Pointer(&s))
-
-	b[0] = 'H' // Modifying b WILL affect s!
-
-	fmt.Println(s)         // "Hello" (unsafe modification)
-	fmt.Println(string(b)) // "Hello"
+	//s := "hello"
+	////b := StringToBytes(s)
+	//b := *(*[]byte)(unsafe.Pointer(&s))
+	//
+	//b[0] = 'H' // Modifying b WILL affect s!
+	//
+	//fmt.Println(s)         // "Hello" (unsafe modification)
+	//fmt.Println(string(b)) // "Hello"
 
 }
 

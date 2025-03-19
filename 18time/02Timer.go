@@ -55,8 +55,8 @@ func main() {
 	//time.Sleep(2 * time.Second) // Timer already expired
 	//
 	//timer.Reset(3 * time.Second) // Resetting a dead timer
-	//<-timer.C
-	//fmt.Println("Timer expired (unexpected behavior)")
+	//x := <-timer.C
+	//fmt.Println("Timer expired (unexpected behavior)", x)
 
 	// Solution: Drain the Channel First
 	//timer := time.NewTimer(1 * time.Second)

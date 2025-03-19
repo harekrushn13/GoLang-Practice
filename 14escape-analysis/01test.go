@@ -1,5 +1,7 @@
 package main
 
+//go build -gcflags=”-m”
+
 func main() {
 	x := 2
 	square1(x)

@@ -10,9 +10,9 @@ func main() {
 	defer func() {
 		r := recover()
 		if r != nil {
-			fmt.Println(r)
+			fmt.Println("Main recover : ", r)
 		}
-		fmt.Println(string(debug.Stack()))
+		fmt.Println("Main Stacktrace : ", string(debug.Stack()))
 	}()
 
 	var wg sync.WaitGroup // Declare a WaitGroup
@@ -23,9 +23,9 @@ func main() {
 		defer func() {
 			r := recover()
 			if r != nil {
-				fmt.Println(r)
+				fmt.Println("Routine recover : ", r)
 			}
-			fmt.Println(string(debug.Stack()))
+			fmt.Println("Routine Stacktrace : ", string(debug.Stack()))
 		}()
 		wg.Done()
 		wg.Wait()
